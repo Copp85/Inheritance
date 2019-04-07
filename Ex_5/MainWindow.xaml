@@ -1,0 +1,32 @@
+﻿<Window x:Class="Ex_5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ex_5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="311*"/>
+            <RowDefinition Height="109*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="52*"/>
+            <ColumnDefinition Width="47*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox Name="lbxBankAccounts" Grid.Column="0" Grid.Row="0" Margin="30" SelectionChanged="LbxBankAccounts_SelectionChanged"/>
+        <TextBlock x:Name="tbkListDetails" Grid.Column="1" HorizontalAlignment="Left" Margin="128,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="126" Width="148" />
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+            <Button Content="Withdraw" Name="btnWithdraw" Margin="10" Grid.Column="1" Grid.Row="1" Width="100" Height="50" Click="BtnWithdraw_Click" />
+            <Button Content="Deposit" Name="btnDeposit" Margin="10" Grid.Column="1" Grid.Row="1" Width="100" Height="50"/>
+            <Button Content="Add interest" Name="btnAddInterest" Margin="10" Grid.Column="1" Grid.Row="1" Width="100" Height="50" Click="BtnAddInterest_Click"/>
+        </StackPanel>
+        <TextBlock HorizontalAlignment="Left" Margin="66,24,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-2.561,0.375" Height="26" Width="68"><InlineUIContainer>
+                <TextBox x:Name="txBxAmount" Height="23" TextWrapping="Wrap" Text="TextBox" Width="120"/>
+            </InlineUIContainer></TextBlock>
+        <Button Content="Save to file" x:Name="btnSaveAccounts" Margin="10" Grid.Column="0" Grid.Row="1" Width="100" Height="50" Click="btnSaveAccounts_Click"/>
+        <!--<Button Content="Save" Grid.Column="1" HorizontalAlignment="Left" Margin="112,244,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click"-->
+
+    </Grid>
+</Window>
